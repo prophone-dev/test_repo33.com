@@ -947,14 +947,15 @@
     <div
         x-data="{
         activeImage: 1,
-        amountOfImages: 1,
+        amountOfImages: 3,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
-        }"
-            x-init="loop"
-            class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-        >
+    }"
+        x-init="loop"
+        class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
+    >
+        
         <div
             class="absolute inset-0"
             x-show="activeImage === 1"
@@ -965,17 +966,47 @@
             x-transition:leave-start="transform"
             x-transition:leave-end="transform -translate-x-full"
         >
-        
-            
             <img
                 class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/0WQUMP69VGXR1TQ8L3SU1VHSTFSU1AUGIKV7ZV8Z.jpeg"
-                alt=""
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/2f3fa642-09f0-4622-874e-7ea14654cb7f.png"
+                alt="painters near me company Perben Painting &amp; Sons in , "
             />
-                
-        
-            
         </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 2"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            <img
+                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/06f5da59-aa2f-4c0a-8060-ebae1ed4b59c.png"
+                alt="painters near me company Perben Painting &amp; Sons in , "
+            />
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 3"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            <img
+                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/d6b23501-316f-410d-9991-96ced18f21c1.png"
+                alt="painters near me company Perben Painting &amp; Sons in , "
+            />
+        </div>
+        
     </div>
     
 </div>
